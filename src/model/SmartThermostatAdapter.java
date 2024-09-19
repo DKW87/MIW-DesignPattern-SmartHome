@@ -32,8 +32,8 @@ public class SmartThermostatAdapter implements LightControl {
     private int convertBrightnessToTemperature(int level) {
         final int MIN_LEVEL = 0;
         final int MAX_LEVEL = 100;
-        int minTemp = 15;
-        int maxTemp = 30;
+        final int MIN_TEMP = 15;
+        final int MAX_TEMP = 30;
 
         if (level < MIN_LEVEL) {
             level = MIN_LEVEL;
@@ -43,7 +43,7 @@ public class SmartThermostatAdapter implements LightControl {
             level = MAX_LEVEL;
         }
 
-        return minTemp + (level * (maxTemp - minTemp) / 100);
+        return MIN_TEMP + (level * (MAX_TEMP - MIN_TEMP) / 100);
     }
 
 }
