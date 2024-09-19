@@ -7,7 +7,7 @@ package model;
  */
 public class SmartThermostatAdapter implements LightControl {
 
-    private SmartThermostat smartThermostat;
+    private final SmartThermostat smartThermostat;
 
     public SmartThermostatAdapter(SmartThermostat smartThermostat) {
         this.smartThermostat = smartThermostat;
